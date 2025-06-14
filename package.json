@@ -1,5 +1,10 @@
 {
+  "name": "learn-honohub",
+  "type": "module",
   "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
     "check": "biome check --unsafe .",
     "check:write": "pnpm check --write"
   },
@@ -7,7 +12,14 @@
     "node": "20.16.0"
   },
   "packageManager": "pnpm@9.4.0",
+  "dependencies": {
+    "@hono/node-server": "^1.14.4",
+    "hono": "^4.7.11"
+  },
   "devDependencies": {
-    "@biomejs/biome": "^1.8.3"
+    "@biomejs/biome": "^1.8.3",
+    "@types/node": "^20.11.17",
+    "tsx": "^4.7.1",
+    "typescript": "^5.8.3"
   }
 }
