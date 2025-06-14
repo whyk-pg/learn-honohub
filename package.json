@@ -2,7 +2,7 @@
   "name": "learn-honohub",
   "type": "module",
   "scripts": {
-    "dev": "tsx watch src/index.ts",
+    "dev": "tsx watch --env-file=.env src/index.ts",
     "build": "tsc",
     "start": "node dist/index.js",
     "check": "biome check --unsafe .",
@@ -14,11 +14,17 @@
   "packageManager": "pnpm@9.4.0",
   "dependencies": {
     "@hono/node-server": "^1.14.4",
-    "hono": "^4.7.11"
+    "@tidbcloud/serverless": "^0.2.0",
+    "drizzle-orm": "^0.44.2",
+    "hono": "^4.7.11",
+    "honohub": "^0.3.0"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.8.3",
     "@types/node": "^20.11.17",
+    "dotenv": "^16.5.0",
+    "drizzle-kit": "^0.31.1",
+    "mysql2": "^3.14.1",
     "tsx": "^4.7.1",
     "typescript": "^5.8.3"
   }

@@ -1,11 +1,9 @@
 import { serve } from "@hono/node-server";
 import { Hono } from "hono";
+import { createHub } from "honohub";
+import hubConfig from "../hub.config";
 
-const app = new Hono();
-
-app.get("/", (c) => {
-  return c.text("Hello Hono!");
-});
+const app = new Hono().route("/", createHub(hubConfig));
 
 serve(
   {
